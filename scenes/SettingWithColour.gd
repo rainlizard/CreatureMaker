@@ -17,7 +17,7 @@ var setting_value : Color:
 		match name:
 			"SetUiBackgroundColour": RenderingServer.set_default_clear_color(setting_value)
 		
-		if setting_value == default_value:
+		if setting_value.to_html(true) == default_value.to_html(true):
 			$Label.self_modulate.a = 0.25
 		else:
 			$Label.self_modulate.a = 1.00

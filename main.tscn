@@ -1036,6 +1036,7 @@ text = "Name"
 horizontal_alignment = 1
 
 [node name="CreatureNameLineEdit" type="LineEdit" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+self_modulate = Color(1, 1, 1, 0.25)
 layout_mode = 2
 size_flags_horizontal = 3
 placeholder_text = "<Creature name>"
