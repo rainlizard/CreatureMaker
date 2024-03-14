@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://da8afqvr112fm"]
+
+[ext_resource type="Script" path="res://messages/CustomTooltip.gd" id="1_bnhmb"]
+
+[node name="CustomTooltip" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+script = ExtResource("1_bnhmb")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 25.0
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer"]
+self_modulate = Color(0.752941, 0.752941, 0.752941, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3

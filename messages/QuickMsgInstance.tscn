@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://c022gaqkbxwky"]
+
+[ext_resource type="Script" path="res://messages/QuickMsgInstance.gd" id="1_h0mxl"]
+
+[node name="QuickMsgInstance" type="PanelContainer" groups=["MessageInstance"]]
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+script = ExtResource("1_h0mxl")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 2
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Test"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

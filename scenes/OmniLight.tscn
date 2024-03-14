@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcndodfefewom"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rannm"]
+albedo_color = Color(1, 0.87451, 0.25098, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_xulbl"]
+material = SubResource("StandardMaterial3D_rannm")
+radius = 0.025
+height = 0.05
+
+[node name="OmniLight3D" type="OmniLight3D"]
+shadow_enabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_xulbl")

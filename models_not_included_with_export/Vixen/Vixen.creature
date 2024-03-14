@@ -1,0 +1,179 @@
+[Stand_0]
+
+Bone=Transform3D(1, -2.64698e-23, 1.1755e-38, 2.64698e-23, 1, -8.88178e-16, 1.17549e-38, 8.88178e-16, 1, 0, 0, 2.98023e-08)
+
+[Stand_offset]
+
+fp_offset=Vector2(0.511111, 1)
+td_offset=Vector2(0.537778, 0.911111)
+
+[Walk_0]
+
+Bone=Transform3D(1, -2.64698e-23, 1.1755e-38, 2.64698e-23, 1, -8.88178e-16, 1.17549e-38, 8.88178e-16, 1, 0, 0, 2.98023e-08)
+
+[Walk_offset]
+
+fp_offset=Vector2(0.528889, 1)
+td_offset=Vector2(0.537778, 0.918367)
+
+[Drag_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[Attack_offset]
+
+fp_offset=Vector2(0.540323, 1)
+td_offset=Vector2(0.544355, 0.69641)
+
+[Dig_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[Smoke_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[Relax_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[PrettyDance_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[Hit_offset]
+
+fp_offset=Vector2i(0, 0)
+td_offset=Vector2i(0, 0)
+
+[PickedUp_offset]
+
+fp_offset=Vector2i(0, 0)
+td_offset=Vector2i(0, 0)
+
+[Slapped_offset]
+
+fp_offset=Vector2i(0, 0)
+td_offset=Vector2i(0, 0)
+
+[Celebrate_offset]
+
+fp_offset=Vector2(0.530076, 1)
+td_offset=Vector2(0.514766, 0.898585)
+
+[LairSleep_offset]
+
+fp_offset=Vector2i(0, 0)
+td_offset=Vector2i(0, 0)
+
+[EatChicken_offset]
+
+fp_offset=Vector2(0.572975, 1)
+td_offset=Vector2(0.677419, 0.790323)
+
+[Torture_offset]
+
+fp_offset=Vector2(0.572975, 1)
+td_offset=Vector2(0.709677, 0.790323)
+
+[Complain_offset]
+
+fp_offset=Vector2i(0, 0)
+td_offset=Vector2i(0, 0)
+
+[Dying_offset]
+
+fp_offset=Vector2i(0, 0)
+td_offset=Vector2i(0, 0)
+
+[DeadSplat_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[GFX18_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[QuerySymbol_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[HandSymbol_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[GFX21_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[Settings]
+
+CreatureNameLineEdit="Vixen"
+SetAutoOpenExportDir=true
+SetCameraZoom=1.0
+SetModelScale=0.44
+SetModelPositionX=0.0
+SetModelPositionY=-0.39
+SetCameraClip=100
+SetTdDegrees=46.76
+SetFirstPersonSize=1.0
+SetImageScale=0.289
+SetMSAA=0
+SetSnapVerticesToPixel=1
+SetSnapTransformsToPixel=1
+SetDenoiseDifference=0.0
+SetBlurTexture=1
+SetDitherStrength=0.0
+SetTonemapMode=2
+SetTonemapExposure=1.0
+SetTonemapWhite=1.0
+SetMinimumDark=Color(0.109804, 0.0784314, 0, 1)
+SetLightAngle=75.0
+SetLightCount=3
+SetLightEnergy=0.8
+SetLightColour=Color(1, 1, 1, 1)
+SetAmbientLightEnergy=1.0
+SetAmbientLightColour=Color(0, 0, 0, 1)
+SetSelfShadowing=0.66
+SetLightDistance=1.0
+SetOmniRange=100.0
+SetOmniAttenuation=0.0
+SetLightSize=0.0
+SetLightSpecular=0.0
+SetOutlineIntensity=0.333
+SetOutlineColor=Color(0, 0, 0, 1)
+SetEdgeHighlightStrength=0.1
+SetEdgeDepthThreshold=1.0
+SetEdgeNormalThreshold=1.0
+SetEdgeHighlightColor=Color(0.33, 0.33, 0.33, 1)
+SetEdgeShadowStrength=0.0
+SetEdgeShadowColor=Color(0, 0, 0, 1)
+SetSobelIntensity=1.0
+SetSobelThreshold=1.0
+SetSsaoRadius=1.0
+SetSsaoIntensity=2.0
+SetSsaoPower=1.5
+SetSsaoDetail=0.5
+SetSsaoHorizon=0.06
+SetSsaoSharpness=0.0
+SetSsaoLightAffect=0.0
+SetSsaoAoChannelAffect=0.0
+SetSsilRadius2=5.0
+SetSsilIntensity=0.0
+SetSsilSharpness=0.98
+SetSsilNormalRejection=1.0
+SetFrameColour=Color(0.305882, 0.356863, 0.360784, 1)
+SetUiBackgroundColour=Color(0.348, 0.348, 0.4, 1)
+SetPoserColour=Color(1, 1, 1, 0.501961)
+SetPoserSize=0.04
+SetScreenScale=1.0

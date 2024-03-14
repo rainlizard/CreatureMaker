@@ -1,0 +1,1743 @@
+[gd_scene load_steps=65 format=3 uid="uid://k84kqnfpxut5"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_k3sd8"]
+[ext_resource type="PackedScene" uid="uid://dej2noy0xi7dq" path="res://scenes/SettingWithValue.tscn" id="2_go4a3"]
+[ext_resource type="Script" path="res://FrameUpdater.gd" id="3_841el"]
+[ext_resource type="Script" path="res://Screen.gd" id="3_d1bq7"]
+[ext_resource type="Script" path="res://DrawingCanvas.gd" id="3_e1lf2"]
+[ext_resource type="PackedScene" uid="uid://8x0u4861vh42" path="res://Frame.tscn" id="3_vlpmu"]
+[ext_resource type="Script" path="res://AnimatedImage.gd" id="4_4glgi"]
+[ext_resource type="Script" path="res://FrameManager.gd" id="4_5oroe"]
+[ext_resource type="PackedScene" uid="uid://c1g77or01qdy1" path="res://scenes/SettingWithColour.tscn" id="4_he1p5"]
+[ext_resource type="Theme" uid="uid://dwq1ngdu4i5mr" path="res://theme.tres" id="4_l6jh1"]
+[ext_resource type="Script" path="res://HeightComparison.gd" id="5_7da1d"]
+[ext_resource type="Script" path="res://SelectCurrentAnimation.gd" id="5_43fyr"]
+[ext_resource type="Texture2D" uid="uid://dnses3wuyuv7m" path="res://HeightCompare/tileback.png" id="5_ij8xh"]
+[ext_resource type="Script" path="res://scenes/AdjustingAxisButton.gd" id="5_m7jc1"]
+[ext_resource type="Script" path="res://scenes/CameraPerspectiveButton.gd" id="5_uxb0p"]
+[ext_resource type="Script" path="res://BuiltInAnimationOptions.gd" id="7_l71q2"]
+[ext_resource type="Script" path="res://scenes/AniAutoFillButton.gd" id="8_me3j6"]
+[ext_resource type="Script" path="res://CenterTutorialLabel.gd" id="10_yjym8"]
+[ext_resource type="Script" path="res://LoadModel.gd" id="11_5mclg"]
+[ext_resource type="Script" path="res://ExportCreature.gd" id="11_g84l1"]
+[ext_resource type="Script" path="res://LoadCreature.gd" id="11_wrtee"]
+[ext_resource type="Script" path="res://SaveCreature.gd" id="12_fp6fj"]
+[ext_resource type="Script" path="res://LoadTexture.gd" id="12_vfodw"]
+[ext_resource type="Script" path="res://scenes/SettingWithLineEdit.gd" id="14_kr7q2"]
+[ext_resource type="Script" path="res://CopyPasteCodeWindow.gd" id="14_ovo6x"]
+[ext_resource type="PackedScene" uid="uid://da8afqvr112fm" path="res://messages/CustomTooltip.tscn" id="16_vpk8x"]
+[ext_resource type="PackedScene" uid="uid://enrv5xmm2tl8" path="res://scenes/SettingWithCheckbox.tscn" id="20_l0u42"]
+[ext_resource type="Script" path="res://SsaoButtonVisible.gd" id="24_576dr"]
+[ext_resource type="Script" path="res://messages/Message.gd" id="26_af7f5"]
+[ext_resource type="Texture2D" uid="uid://2mo2huwdp0hv" path="res://HeightCompare/1_Beetle.png" id="27_inacs"]
+[ext_resource type="Texture2D" uid="uid://b4wxg2qbx46x8" path="res://HeightCompare/2_DemonSpawn.png" id="28_1nhq6"]
+[ext_resource type="Texture2D" uid="uid://bdn62pnenexwf" path="res://HeightCompare/3_Spider.png" id="29_0vqru"]
+[ext_resource type="Texture2D" uid="uid://opjhkeb85grb" path="res://HeightCompare/4_Ghost.png" id="30_qaq2s"]
+[ext_resource type="Texture2D" uid="uid://i7dagqrgoij6" path="res://HeightCompare/5_Imp.png" id="31_si8q2"]
+[ext_resource type="Texture2D" uid="uid://dpin5t0884t4x" path="res://HeightCompare/6_Fly.png" id="32_3y68x"]
+[ext_resource type="Texture2D" uid="uid://d1kdj88hvopa1" path="res://HeightCompare/7_Tentacle.png" id="33_4b0fr"]
+[ext_resource type="Texture2D" uid="uid://byskuvsg0rguh" path="res://HeightCompare/8_Troll.png" id="34_br8f2"]
+[ext_resource type="Texture2D" uid="uid://cmf7ic10kypwe" path="res://HeightCompare/9_DwarfA.png" id="35_7tdbm"]
+[ext_resource type="Texture2D" uid="uid://b54vynpcs4f4s" path="res://HeightCompare/10_HellHound.png" id="36_2gdy2"]
+[ext_resource type="Texture2D" uid="uid://xsnupi4lj2jf" path="res://HeightCompare/11_Tunneller.png" id="37_jmkmg"]
+[ext_resource type="Texture2D" uid="uid://bs8w3377hk1kf" path="res://HeightCompare/12_Orc.png" id="38_8320p"]
+[ext_resource type="Script" path="res://OffsetPicker.gd" id="38_ctt8q"]
+[ext_resource type="Texture2D" uid="uid://c06qwwl0ivdvl" path="res://HeightCompare/13_Skeleton.png" id="39_3cwgo"]
+[ext_resource type="Texture2D" uid="uid://2hqu5k3icp7" path="res://HeightCompare/14_Monk.png" id="40_wqiu8"]
+[ext_resource type="Texture2D" uid="uid://bv6g35sq5cjwm" path="res://HeightCompare/15_Fairy.png" id="41_5je8j"]
+[ext_resource type="Texture2D" uid="uid://bm5kee50fcy78" path="res://HeightCompare/16_Thief.png" id="42_ualmd"]
+[ext_resource type="Texture2D" uid="uid://dm0nnvwelf5ih" path="res://HeightCompare/17_Witch.png" id="43_6t73a"]
+[ext_resource type="Texture2D" uid="uid://ba2lsihdbiwb" path="res://HeightCompare/18_Archer.png" id="44_3xkhc"]
+[ext_resource type="Texture2D" uid="uid://c8mq7yas3nalc" path="res://HeightCompare/19_BileDemon.png" id="45_gkvpa"]
+[ext_resource type="Texture2D" uid="uid://1dq8xqioqahx" path="res://HeightCompare/20_Vampire.png" id="46_fwoyf"]
+[ext_resource type="Texture2D" uid="uid://dwoa72b60ofo7" path="res://HeightCompare/21_Warlock.png" id="47_6c6qb"]
+[ext_resource type="Script" path="res://HelpButton.gd" id="47_upo64"]
+[ext_resource type="Texture2D" uid="uid://dqe3jwnwt7pj0" path="res://HeightCompare/21B_Knight.png" id="48_c4imo"]
+[ext_resource type="Script" path="res://AboutButton.gd" id="48_lov1p"]
+[ext_resource type="Texture2D" uid="uid://cak624u4eolwn" path="res://HeightCompare/22_Avatar.png" id="49_1mrbh"]
+[ext_resource type="Texture2D" uid="uid://q8r4k41f7pv5" path="res://HeightCompare/23_HornedReaper.png" id="50_0fnwg"]
+[ext_resource type="Texture2D" uid="uid://cbc0wwe3ftrrj" path="res://HeightCompare/24_Samurai.png" id="51_vrfwu"]
+[ext_resource type="Texture2D" uid="uid://bp3uucrwqqr1" path="res://HeightCompare/25_DarkMistress.png" id="52_ue1ai"]
+[ext_resource type="Texture2D" uid="uid://cvssw71mgd5aw" path="res://HeightCompare/26_Wizard.png" id="53_gryop"]
+[ext_resource type="Texture2D" uid="uid://buud4cjfg4rwv" path="res://HeightCompare/27_Barbarian.png" id="54_8frq0"]
+[ext_resource type="PackedScene" uid="uid://c5psl1i8pr4kv" path="res://scenes/category.tscn" id="54_huf07"]
+[ext_resource type="Texture2D" uid="uid://cd0xtar0ocmcr" path="res://HeightCompare/28_Giant.png" id="55_afoak"]
+[ext_resource type="Texture2D" uid="uid://cj3y6l7ymc2a8" path="res://HeightCompare/29_Dragon.png" id="56_bkr6i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5y16"]
+bg_color = Color(1, 1, 1, 1)
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_k3sd8")
+
+[node name="FrameManager" type="Node" parent="."]
+script = ExtResource("4_5oroe")
+
+[node name="FrameUpdater" type="Node" parent="."]
+script = ExtResource("3_841el")
+
+[node name="Screen" type="Node" parent="."]
+script = ExtResource("3_d1bq7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Ui" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+theme = ExtResource("4_l6jh1")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Ui"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HSplitContainer" type="HSplitContainer" parent="CanvasLayer/Ui/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AllowForCenterText" type="Control" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="VSplitContainer" type="VSplitContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HeightComparison" type="PanelContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(0, 314)
+layout_mode = 2
+mouse_filter = 1
+script = ExtResource("5_7da1d")
+
+[node name="Control" type="Control" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison"]
+clip_contents = true
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/Control"]
+texture_filter = 5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+size_flags_horizontal = 3
+mouse_filter = 2
+texture = ExtResource("5_ij8xh")
+stretch_mode = 1
+flip_v = true
+
+[node name="HeightCompareScrollContainer" type="ScrollContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison"]
+unique_name_in_owner = true
+layout_mode = 2
+vertical_scroll_mode = 2
+
+[node name="IntermediateScaler" type="Control" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer"]
+custom_minimum_size = Vector2(5000, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="AllHeightImages" type="HBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 1610.0
+offset_bottom = 94.0
+scale = Vector2(3, 3)
+size_flags_horizontal = 0
+mouse_filter = 2
+
+[node name="Spacing" type="Control" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="CompareImage" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+stretch_mode = 2
+
+[node name="TextureRect1" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("27_inacs")
+stretch_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("28_1nhq6")
+stretch_mode = 2
+
+[node name="TextureRect6" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("32_3y68x")
+stretch_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("29_0vqru")
+stretch_mode = 2
+
+[node name="TextureRect5" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("31_si8q2")
+stretch_mode = 2
+
+[node name="TextureRect4" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("30_qaq2s")
+stretch_mode = 2
+
+[node name="TextureRect7" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("33_4b0fr")
+stretch_mode = 2
+
+[node name="TextureRect10" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("36_2gdy2")
+stretch_mode = 2
+
+[node name="TextureRect9" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("35_7tdbm")
+stretch_mode = 2
+
+[node name="TextureRect11" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("37_jmkmg")
+stretch_mode = 2
+
+[node name="TextureRect8" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("34_br8f2")
+stretch_mode = 2
+
+[node name="TextureRect15" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("41_5je8j")
+stretch_mode = 2
+
+[node name="TextureRect19" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("45_gkvpa")
+stretch_mode = 2
+
+[node name="TextureRect12" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("38_8320p")
+stretch_mode = 2
+
+[node name="TextureRect13" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("39_3cwgo")
+stretch_mode = 2
+
+[node name="TextureRect14" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("40_wqiu8")
+stretch_mode = 2
+
+[node name="TextureRect16" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("42_ualmd")
+stretch_mode = 2
+
+[node name="TextureRect18" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("44_3xkhc")
+stretch_mode = 2
+
+[node name="TextureRect22" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("48_c4imo")
+stretch_mode = 2
+
+[node name="TextureRect17" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("43_6t73a")
+stretch_mode = 2
+
+[node name="TextureRect21" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("47_6c6qb")
+stretch_mode = 2
+
+[node name="TextureRect25" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("51_vrfwu")
+stretch_mode = 2
+
+[node name="TextureRect27" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("53_gryop")
+stretch_mode = 2
+
+[node name="TextureRect20" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("46_fwoyf")
+stretch_mode = 2
+
+[node name="TextureRect26" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("52_ue1ai")
+stretch_mode = 2
+
+[node name="TextureRect28" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("54_8frq0")
+stretch_mode = 2
+
+[node name="TextureRect24" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("50_0fnwg")
+stretch_mode = 2
+
+[node name="TextureRect23" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("49_1mrbh")
+stretch_mode = 2
+
+[node name="TextureRect29" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("55_afoak")
+stretch_mode = 2
+
+[node name="TextureRect30" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("56_bkr6i")
+stretch_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="SelectCurrentAnimation" type="OptionButton" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+script = ExtResource("5_43fyr")
+
+[node name="PrevAnimButton" type="Button" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "<"
+
+[node name="NextAnimButton" type="Button" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = ">"
+
+[node name="RecommendationLabel" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Recommended frames: 6"
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="AddFrameButton" type="Button" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Add frame"
+
+[node name="DeleteFrameButton" type="Button" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Delete frame"
+
+[node name="HeightCompareButton" type="Button" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HBoxContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Compare Height"
+
+[node name="ShowPickerButton" type="Button" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HBoxContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Show offset"
+
+[node name="RotateFrameButton" type="Button" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Rotate"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Animation speed"
+horizontal_alignment = 2
+text_overrun_behavior = 3
+
+[node name="AnimationSpeedLineEdit" type="SpinBox" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+max_value = 1.0
+step = 0.01
+value = 0.12
+
+[node name="HSplitContainer" type="HSplitContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="FrameScrollContainer" type="VBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TdAnimatedAspectRatio" type="AspectRatioContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer/HBoxContainer2/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+alignment_horizontal = 2
+
+[node name="TdAnimatedSection" type="PanelContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer/HBoxContainer2/VBoxContainer2/TdAnimatedAspectRatio"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_o5y16")
+
+[node name="TdAnimatedImage" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer/HBoxContainer2/VBoxContainer2/TdAnimatedAspectRatio/TdAnimatedSection"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("4_4glgi")
+
+[node name="TdAnimatedBack" type="ColorRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer/HBoxContainer2/VBoxContainer2/TdAnimatedAspectRatio/TdAnimatedSection/TdAnimatedImage"]
+auto_translate_mode = 1
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TdOffsetPicker" type="Control" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer/HBoxContainer2/VBoxContainer2/TdAnimatedAspectRatio/TdAnimatedSection/TdAnimatedImage"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("38_ctt8q")
+
+[node name="FpAnimatedAspectRatio" type="AspectRatioContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer/HBoxContainer2/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+alignment_horizontal = 2
+
+[node name="FpAnimatedSection" type="PanelContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer/HBoxContainer2/VBoxContainer2/FpAnimatedAspectRatio"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_o5y16")
+
+[node name="FpAnimatedImage" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer/HBoxContainer2/VBoxContainer2/FpAnimatedAspectRatio/FpAnimatedSection"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("4_4glgi")
+
+[node name="FpAnimatedBack" type="ColorRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer/HBoxContainer2/VBoxContainer2/FpAnimatedAspectRatio/FpAnimatedSection/FpAnimatedImage"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="FpOffsetPicker" type="Control" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer/HBoxContainer2/VBoxContainer2/FpAnimatedAspectRatio/FpAnimatedSection/FpAnimatedImage"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("38_ctt8q")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label4" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer/HBoxContainer2/VBoxContainer/VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Top down"
+
+[node name="TdResolutionSizeLabel" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer/HBoxContainer2/VBoxContainer/VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "254 x 254"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer/HBoxContainer2/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Offset"
+
+[node name="TdOffsetX" type="SpinBox" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer/HBoxContainer2/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+focus_mode = 1
+suffix = "x"
+
+[node name="TdOffsetY" type="SpinBox" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer/HBoxContainer2/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+suffix = "y"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label3" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer/HBoxContainer2/VBoxContainer/VBoxContainer2"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "First person"
+
+[node name="FpResolutionSizeLabel" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer/HBoxContainer2/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "254 x 254"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer/HBoxContainer2/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Offset"
+
+[node name="FpOffsetX" type="SpinBox" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer/HBoxContainer2/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 8
+suffix = "x"
+
+[node name="FpOffsetY" type="SpinBox" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer/HBoxContainer2/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 8
+suffix = "y"
+
+[node name="HSplitContainer" type="HSplitContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BottomPoserAndControls" type="VBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomPoserAndControls"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomPoserAndControls/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BuiltInAnimationOptions" type="OptionButton" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomPoserAndControls/HBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+script = ExtResource("7_l71q2")
+
+[node name="AniAutoFillButton" type="Button" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomPoserAndControls/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Autofill"
+script = ExtResource("8_me3j6")
+
+[node name="BuiltInAnimSlider" type="HSlider" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomPoserAndControls/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.01
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomPoserAndControls/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="FrameLabelForPoser" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomPoserAndControls/HBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Frame 2"
+horizontal_alignment = 1
+
+[node name="CameraPerspectiveButton" type="Button" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomPoserAndControls/HBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Side"
+script = ExtResource("5_uxb0p")
+
+[node name="AdjustingAxisButton" type="Button" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomPoserAndControls/HBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Adjusting X axis"
+script = ExtResource("5_m7jc1")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomPoserAndControls/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Spacing" type="Control" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomPoserAndControls/HBoxContainer/HBoxContainer3"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PoserFrame" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomPoserAndControls" instance=ExtResource("3_vlpmu")]
+layout_mode = 2
+
+[node name="BottomBoneInfo" type="VBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer"]
+visible = false
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Bone name"
+horizontal_alignment = 2
+
+[node name="Label2" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Leg"
+horizontal_alignment = 2
+
+[node name="Label3" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Parent bone"
+horizontal_alignment = 2
+
+[node name="Label4" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Leg"
+horizontal_alignment = 2
+
+[node name="Label6" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer"]
+layout_mode = 2
+text = "Local position"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "X"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0.0"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Y"
+
+[node name="LineEdit2" type="LineEdit" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0.0"
+
+[node name="Label3" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Z"
+
+[node name="LineEdit3" type="LineEdit" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0.0"
+
+[node name="Label7" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer"]
+layout_mode = 2
+text = "Local rotation"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "X"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0.0"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Y"
+
+[node name="LineEdit2" type="LineEdit" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0.0"
+
+[node name="Label3" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Z"
+
+[node name="LineEdit3" type="LineEdit" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0.0"
+
+[node name="Label4" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "W"
+
+[node name="LineEdit4" type="LineEdit" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0.0"
+
+[node name="Label4" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer"]
+layout_mode = 2
+text = "Global position"
+horizontal_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "X"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0.0"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Y"
+
+[node name="LineEdit2" type="LineEdit" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0.0"
+
+[node name="Label3" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Z"
+
+[node name="LineEdit3" type="LineEdit" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0.0"
+
+[node name="Label5" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer"]
+layout_mode = 2
+text = "Global rotation"
+horizontal_alignment = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "X"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0.0"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "Y"
+
+[node name="LineEdit2" type="LineEdit" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0.0"
+
+[node name="Label3" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "Z"
+
+[node name="LineEdit3" type="LineEdit" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0.0"
+
+[node name="Label4" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "W"
+
+[node name="LineEdit4" type="LineEdit" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomBoneInfo/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0.0"
+
+[node name="CenterTutorialLabel" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("10_yjym8")
+metadata/_edit_lock_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="HelpButton" type="Button" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer5"]
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Help"
+text_overrun_behavior = 3
+script = ExtResource("47_upo64")
+
+[node name="AboutButton" type="Button" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer5"]
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 3
+text = "About"
+text_overrun_behavior = 3
+script = ExtResource("48_lov1p")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="LoadCreatureMaker" type="Button" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Open data"
+text_overrun_behavior = 3
+script = ExtResource("11_wrtee")
+
+[node name="SaveCreatureMaker" type="Button" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Save data"
+text_overrun_behavior = 3
+script = ExtResource("12_fp6fj")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label7" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Name"
+horizontal_alignment = 1
+
+[node name="CreatureNameLineEdit" type="LineEdit" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "<Creature name>"
+alignment = 1
+script = ExtResource("14_kr7q2")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="LoadModel" type="Button" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Model"
+script = ExtResource("11_5mclg")
+
+[node name="CurrentlyLoadedModelName" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_alignment = 1
+text_overrun_behavior = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="LoadTexture" type="Button" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Texture"
+script = ExtResource("12_vfodw")
+
+[node name="CurrentlyLoadedTextureName" type="Label" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_alignment = 1
+text_overrun_behavior = 3
+
+[node name="ExportSprites" type="Button" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Export sprites"
+script = ExtResource("11_g84l1")
+
+[node name="SetAutoOpenExportDir" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("20_l0u42")]
+layout_mode = 2
+checkboxText = "Open directory after export"
+default_value = true
+
+[node name="Category" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("54_huf07")]
+layout_mode = 2
+set_text = "Model alignment"
+
+[node name="SetCameraZoom" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+visible = false
+layout_mode = 2
+default_value = 1.0
+maximum_value = 100.0
+
+[node name="SetModelScale" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+slider_visible = false
+slider_step = 0.001
+minimum_value = 0.001
+maximum_value = 32767.0
+
+[node name="SetModelPositionX" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+visible = false
+layout_mode = 2
+slider_visible = false
+default_value = 0.0
+minimum_value = -32767.0
+maximum_value = 32767.0
+
+[node name="SetModelPositionY" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+slider_visible = false
+default_value = 0.0
+minimum_value = -32767.0
+maximum_value = 32767.0
+
+[node name="SetCameraClip" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+slider_visible = false
+default_value = 100.0
+slider_step = 1.0
+maximum_value = 32767.0
+
+[node name="SetTdDegrees" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+visible = false
+layout_mode = 2
+default_value = 46.76
+maximum_value = 360.0
+
+[node name="SetFirstPersonSize" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+visible = false
+layout_mode = 2
+default_value = 1.0
+adjust_instantly = false
+maximum_value = 5.0
+
+[node name="PixelsCategory" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("54_huf07")]
+layout_mode = 2
+set_text = "Resolution"
+
+[node name="SetImageScale" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+auto_translate_mode = 1
+layout_mode = 2
+default_value = 1.0
+slider_step = 0.001
+minimum_value = 0.001
+
+[node name="DrawingCanvas" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+script = ExtResource("3_e1lf2")
+
+[node name="SetMSAA" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+visible = false
+layout_mode = 2
+default_value = 0.0
+slider_step = 1.0
+maximum_value = 3.0
+
+[node name="SetSnapVerticesToPixel" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+visible = false
+layout_mode = 2
+default_value = 1.0
+slider_step = 1.0
+
+[node name="SetSnapTransformsToPixel" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+visible = false
+layout_mode = 2
+default_value = 1.0
+slider_step = 1.0
+
+[node name="SetDenoiseDifference" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+visible = false
+layout_mode = 2
+default_value = 0.0
+
+[node name="SetReduceNoise" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+auto_translate_mode = 1
+layout_mode = 2
+default_value = 0.0
+
+[node name="SetDitherStrength" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 0.0
+slider_step = 0.001
+maximum_value = 0.1
+
+[node name="TonemapCategory" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("54_huf07")]
+layout_mode = 2
+set_text = "Tonemap"
+
+[node name="SetTonemapMode" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 2.0
+slider_step = 1.0
+maximum_value = 3.0
+
+[node name="SetTonemapExposure" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 1.0
+maximum_value = 16.0
+
+[node name="SetTonemapWhite" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 1.0
+maximum_value = 2.0
+
+[node name="SetMinimumDark" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_he1p5")]
+auto_translate_mode = 1
+layout_mode = 2
+default_value = Color(0.109804, 0.0784314, 0, 1)
+edit_alpha = false
+
+[node name="LightCategory" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("54_huf07")]
+layout_mode = 2
+set_text = "Light"
+
+[node name="SetLightAngle" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 45.0
+maximum_value = 180.0
+
+[node name="SetLightCount" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 3.0
+slider_step = 1.0
+maximum_value = 9.0
+
+[node name="SetLightEnergy" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 0.8
+maximum_value = 10.0
+
+[node name="SetLightColour" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_he1p5")]
+layout_mode = 2
+edit_alpha = false
+
+[node name="SetAmbientLightEnergy" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 1.0
+maximum_value = 10.0
+
+[node name="SetAmbientLightColour" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_he1p5")]
+layout_mode = 2
+default_value = Color(0.12549, 0.12549, 0.12549, 1)
+edit_alpha = false
+
+[node name="SetSelfShadowing" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 0.66
+
+[node name="SetLightDistance" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+slider_visible = false
+default_value = 1.0
+maximum_value = 32767.0
+
+[node name="SetOmniRange" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 100.0
+maximum_value = 4096.0
+
+[node name="SetOmniAttenuation" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+slider_visible = false
+default_value = 0.0
+maximum_value = 32767.0
+
+[node name="SetLightSize" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 0.0
+
+[node name="SetLightSpecular" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 0.0
+maximum_value = 16.0
+
+[node name="OutlineCategory" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("54_huf07")]
+layout_mode = 2
+set_text = "Outline"
+
+[node name="SetOutlineIntensity" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+auto_translate_mode = 1
+layout_mode = 2
+default_value = 0.25
+slider_step = 0.001
+
+[node name="SetOutlineColor" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_he1p5")]
+auto_translate_mode = 1
+layout_mode = 2
+default_value = Color(0, 0, 0, 1)
+edit_alpha = false
+
+[node name="EdgeCategory" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("54_huf07")]
+layout_mode = 2
+set_text = "Edge"
+
+[node name="SetEdgeHighlightStrength" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 0.1
+slider_step = 0.001
+
+[node name="SetEdgeDepthThreshold" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 1.0
+slider_step = 0.001
+maximum_value = 2.0
+
+[node name="SetEdgeNormalThreshold" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 1.0
+slider_step = 0.001
+maximum_value = 2.0
+
+[node name="SetEdgeHighlightColor" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_he1p5")]
+layout_mode = 2
+default_value = Color(0.329412, 0.329412, 0.329412, 1)
+edit_alpha = false
+
+[node name="SetEdgeShadowStrength" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+visible = false
+layout_mode = 2
+default_value = 0.0
+slider_step = 0.001
+
+[node name="SetEdgeShadowColor" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_he1p5")]
+visible = false
+layout_mode = 2
+default_value = Color(0, 0, 0, 1)
+edit_alpha = false
+
+[node name="SobelCategory" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("54_huf07")]
+layout_mode = 2
+set_text = "Sobel"
+
+[node name="SetSobelIntensity" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 1.0
+maximum_value = 10.0
+
+[node name="SetSobelThreshold" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 1.0
+maximum_value = 10.0
+
+[node name="SsaoButtonVisible" type="Button" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+toggle_mode = true
+text = "SSAO"
+script = ExtResource("24_576dr")
+
+[node name="SsaoContainer" type="VBoxContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="SetSsaoRadius" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/SsaoContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 1.0
+minimum_value = 0.01
+maximum_value = 16.0
+
+[node name="SetSsaoIntensity" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/SsaoContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 2.0
+maximum_value = 16.0
+
+[node name="SetSsaoPower" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/SsaoContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 1.5
+maximum_value = 100.0
+
+[node name="SetSsaoDetail" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/SsaoContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+maximum_value = 5.0
+
+[node name="SetSsaoHorizon" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/SsaoContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 0.06
+
+[node name="SetSsaoSharpness" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/SsaoContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 0.0
+
+[node name="SetSsaoLightAffect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/SsaoContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 0.0
+
+[node name="SetSsaoAoChannelAffect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/SsaoContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 0.0
+
+[node name="SetSsilRadius2" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/SsaoContainer" instance=ExtResource("2_go4a3")]
+visible = false
+layout_mode = 2
+default_value = 5.0
+minimum_value = 0.01
+maximum_value = 16.0
+
+[node name="SetSsilIntensity" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/SsaoContainer" instance=ExtResource("2_go4a3")]
+visible = false
+layout_mode = 2
+default_value = 0.0
+maximum_value = 16.0
+
+[node name="SetSsilSharpness" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/SsaoContainer" instance=ExtResource("2_go4a3")]
+visible = false
+layout_mode = 2
+default_value = 0.98
+
+[node name="SetSsilNormalRejection" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/SsaoContainer" instance=ExtResource("2_go4a3")]
+visible = false
+layout_mode = 2
+default_value = 1.0
+
+[node name="UICategory" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("54_huf07")]
+layout_mode = 2
+set_text = "UI"
+
+[node name="SetFrameColour" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_he1p5")]
+layout_mode = 2
+default_value = Color(0.137255, 0.137255, 0.145098, 1)
+edit_alpha = false
+
+[node name="SetUiBackgroundColour" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_he1p5")]
+layout_mode = 2
+default_value = Color(0.348, 0.348, 0.4, 1)
+edit_alpha = false
+
+[node name="SetPoserColour" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_he1p5")]
+layout_mode = 2
+default_value = Color(1, 1, 1, 0.501961)
+
+[node name="SetPoserSize" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 0.04
+slider_step = 0.001
+minimum_value = 0.001
+
+[node name="SetScreenScale" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 1.0
+adjust_instantly = false
+maximum_value = 5.0
+
+[node name="CopyPasteCodeWindow" type="Window" parent="CanvasLayer"]
+initial_position = 2
+size = Vector2i(750, 750)
+visible = false
+script = ExtResource("14_ovo6x")
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/CopyPasteCodeWindow"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CopyPasteCodeWindow/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/CopyPasteCodeWindow/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Copy this text into /creatrs/nameofcreature.cfg, replacing the [sprites] section:"
+
+[node name="CopyPasteTextEdit" type="TextEdit" parent="CanvasLayer/CopyPasteCodeWindow/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "test"
+
+[node name="HelpWindow" type="Window" parent="CanvasLayer"]
+auto_translate_mode = 1
+title = "Help"
+initial_position = 2
+size = Vector2i(750, 750)
+visible = false
+script = ExtResource("14_ovo6x")
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/HelpWindow"]
+auto_translate_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/HelpWindow/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/HelpWindow/PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "A brief guide on how this tool works:
+1. Click 'Open data' and open /Models/ThornyDragon/ThornyDragon.creature
+2. Click the drop-down menu in the top left corner to switch to 'Walk' or 'Attack'
+3. Click 'Rotate' to see the other animated directions
+4. Click 'Compare Height' to compare your First-Person creature's height with others
+5. Set 'Image scale' setting while Compare Height is open to set the perfect creature size
+6. Click 'Export sprites', save creature_thornydragon.zip in /Dungeon Keeper/fxdata/
+7. Go to your Dungeon Keeper directory and open the /creatrs/ folder
+8. Pick an existing creature such as dragon.cfg and replace its [sprites] section with the text that popped up after export
+9. Run the game and that creature type will now have the appearance of ThornyDragon
+
+To make a new creature you'll need Blender. https://www.blender.org/download/
+1. Download a model or make your own
+2. Animate it or use the animations built-in to the model you downloaded
+3. In Blender click File->Export as .glb/.gltf so the file can be loaded in CreatureMaker
+4. Load the model file and texture file into CreatureMaker by clicking the 'Model' and 'Texture' buttons
+5. Under 'Model alignment' set 'Model scale' and 'Model position y' so the model fits correctly within the bottom Posing frame
+6. Change any other settings you like
+7. Next to the 'Autofill' button click the dropdown menu to see the model's animations. Then click 'Autofill' to create frames for the current animation. Then switch the current animation by clicking the other drop-down menu in the top left corner. Repeat this process for Stand/Walk/Attack/etc.
+8. 'Save data' to save everything you've done so far in CreatureMaker. It also saves a copy of the model and texture files. 'Open data' next time you open CreatureMaker to resume.
+9. 'Export sprites' to create a file that KeeperFX can read.
+
+This tool is still a work in progress so some things may need manual editing such as the creature icon and portrait."
+
+[node name="AboutWindow" type="Window" parent="CanvasLayer"]
+auto_translate_mode = 1
+title = "About"
+initial_position = 2
+size = Vector2i(460, 104)
+visible = false
+script = ExtResource("14_ovo6x")
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/AboutWindow"]
+auto_translate_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/AboutWindow/PanelContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/AboutWindow/PanelContainer/MarginContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]A tool for Dungeon Keeper 1.
+CreatureMaker is made by rainlizard using Godot Engine."
+
+[node name="AutofillConfirmationDialog" type="ConfirmationDialog" parent="CanvasLayer"]
+position = Vector2i(100, 100)
+size = Vector2i(503, 164)
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/AutofillConfirmationDialog"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -49.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/AutofillConfirmationDialog/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/AutofillConfirmationDialog/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/AutofillConfirmationDialog/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Number of frames to create based on the built-in animation.
+Keep in mind this will clear existing frames you've made."
+
+[node name="AutofillSpinBox" type="SpinBox" parent="CanvasLayer/AutofillConfirmationDialog/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+max_value = 32767.0
+value = 6.0
+
+[node name="UiMessages" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="Message" type="Control" parent="CanvasLayer/UiMessages"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.8
+anchor_right = 0.5
+anchor_bottom = 0.8
+mouse_filter = 2
+script = ExtResource("26_af7f5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UiMessages/Message"]
+layout_mode = 0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+alignment = 1
+
+[node name="CustomTooltip" parent="CanvasLayer/UiMessages" instance=ExtResource("16_vpk8x")]
+visible = false
+
+[node name="LoadModelFileDialog" type="FileDialog" parent="."]
+title = "Load model"
+initial_position = 2
+size = Vector2i(750, 500)
+ok_button_text = "Open"
+dialog_hide_on_ok = true
+dialog_autowrap = true
+mode_overrides_title = false
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.glb,*.gltf")
+show_hidden_files = true
+
+[node name="LoadTextureFileDialog" type="FileDialog" parent="."]
+title = "Load texture"
+initial_position = 2
+size = Vector2i(750, 500)
+ok_button_text = "Open"
+dialog_hide_on_ok = true
+dialog_autowrap = true
+mode_overrides_title = false
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.png")
+show_hidden_files = true
+
+[node name="LoadCreatureMakerDataFileDialog" type="FileDialog" parent="."]
+title = "Load CreatureMaker data"
+initial_position = 2
+size = Vector2i(750, 500)
+ok_button_text = "Open"
+dialog_hide_on_ok = true
+dialog_autowrap = true
+mode_overrides_title = false
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.creature")
+show_hidden_files = true
+
+[node name="SaveCreatureMakerDataFileDialog" type="FileDialog" parent="."]
+title = "Save CreatureMaker data"
+initial_position = 2
+size = Vector2i(750, 500)
+ok_button_text = "Save"
+dialog_hide_on_ok = true
+dialog_autowrap = true
+mode_overrides_title = false
+access = 2
+filters = PackedStringArray("*.creature")
+show_hidden_files = true
+
+[node name="ExportSpritesFileDialog" type="FileDialog" parent="."]
+unique_name_in_owner = true
+title = "Export sprites"
+initial_position = 2
+size = Vector2i(750, 500)
+ok_button_text = "Save"
+dialog_hide_on_ok = true
+dialog_autowrap = true
+mode_overrides_title = false
+access = 2
+filters = PackedStringArray("*.zip")
+show_hidden_files = true
+
+[node name="ChooseDkExe" type="FileDialog" parent="."]
+title = "Select DK Executable"
+initial_position = 2
+size = Vector2i(750, 500)
+ok_button_text = "Open"
+dialog_hide_on_ok = true
+dialog_autowrap = true
+mode_overrides_title = false
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.exe")
+show_hidden_files = true
+
+[connection signal="mouse_entered" from="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison" method="_on_mouse_exited"]
+[connection signal="item_selected" from="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HBoxContainer/SelectCurrentAnimation" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HBoxContainer/SelectCurrentAnimation" method="_on_item_selected"]
+[connection signal="pressed" from="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HBoxContainer/PrevAnimButton" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HBoxContainer/SelectCurrentAnimation" method="_on_prev_anim_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HBoxContainer/NextAnimButton" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HBoxContainer/SelectCurrentAnimation" method="_on_next_anim_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HBoxContainer/AddFrameButton" to="FrameManager" method="_on_add_frame_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HBoxContainer/DeleteFrameButton" to="FrameManager" method="_on_delete_frame_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HBoxContainer/HeightCompareButton" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison" method="_on_height_compare_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HBoxContainer/ShowPickerButton" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer/HBoxContainer2/VBoxContainer2/TdAnimatedAspectRatio/TdAnimatedSection/TdAnimatedImage/TdOffsetPicker" method="_on_show_picker_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HBoxContainer/ShowPickerButton" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HSplitContainer/HBoxContainer2/VBoxContainer2/FpAnimatedAspectRatio/FpAnimatedSection/FpAnimatedImage/FpOffsetPicker" method="_on_show_picker_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HBoxContainer/RotateFrameButton" to="FrameManager" method="_on_rotate_frame_button_pressed"]
+[connection signal="value_changed" from="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HBoxContainer/HBoxContainer/AnimationSpeedLineEdit" to="FrameManager" method="_on_animation_speed_line_edit_value_changed"]
+[connection signal="item_selected" from="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomPoserAndControls/HBoxContainer/HBoxContainer/BuiltInAnimationOptions" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomPoserAndControls/HBoxContainer/HBoxContainer/BuiltInAnimationOptions" method="_on_item_selected"]
+[connection signal="pressed" from="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomPoserAndControls/HBoxContainer/HBoxContainer/AniAutoFillButton" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomPoserAndControls/HBoxContainer/HBoxContainer/AniAutoFillButton" method="_on_pressed"]
+[connection signal="value_changed" from="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomPoserAndControls/HBoxContainer/HBoxContainer/BuiltInAnimSlider" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomPoserAndControls/HBoxContainer/HBoxContainer/BuiltInAnimationOptions" method="_on_built_in_anim_slider_value_changed"]
+[connection signal="pressed" from="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomPoserAndControls/HBoxContainer/HBoxContainer2/CameraPerspectiveButton" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomPoserAndControls/HBoxContainer/HBoxContainer2/CameraPerspectiveButton" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomPoserAndControls/HBoxContainer/HBoxContainer2/AdjustingAxisButton" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomPoserAndControls/HBoxContainer/HBoxContainer2/AdjustingAxisButton" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer5/HelpButton" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer5/HelpButton" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer5/AboutButton" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer5/AboutButton" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LoadCreatureMaker" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LoadCreatureMaker" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/SaveCreatureMaker" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/SaveCreatureMaker" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/LoadModel" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/LoadModel" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer4/LoadTexture" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer4/LoadTexture" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/ExportSprites" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/ExportSprites" method="_on_pressed"]
+[connection signal="gui_input" from="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/DrawingCanvas" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/DrawingCanvas" method="_on_gui_input"]
+[connection signal="toggled" from="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/SsaoButtonVisible" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/SsaoButtonVisible" method="_on_toggled"]
+[connection signal="close_requested" from="CanvasLayer/CopyPasteCodeWindow" to="CanvasLayer/CopyPasteCodeWindow" method="_on_close_requested"]
+[connection signal="close_requested" from="CanvasLayer/HelpWindow" to="CanvasLayer/HelpWindow" method="_on_close_requested"]
+[connection signal="close_requested" from="CanvasLayer/AboutWindow" to="CanvasLayer/AboutWindow" method="_on_close_requested"]
+[connection signal="confirmed" from="CanvasLayer/AutofillConfirmationDialog" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/HSplitContainer/BottomPoserAndControls/HBoxContainer/HBoxContainer/AniAutoFillButton" method="_on_autofill_confirmation_dialog_confirmed"]
+[connection signal="file_selected" from="LoadModelFileDialog" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3/LoadModel" method="_on_load_model_file_dialog_file_selected"]
+[connection signal="file_selected" from="LoadTextureFileDialog" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer4/LoadTexture" method="_on_load_texture_file_dialog_file_selected"]
+[connection signal="file_selected" from="LoadCreatureMakerDataFileDialog" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LoadCreatureMaker" method="_on_load_animation_file_dialog_file_selected"]
+[connection signal="file_selected" from="SaveCreatureMakerDataFileDialog" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/SaveCreatureMaker" method="_on_save_animation_file_dialog_file_selected"]
+[connection signal="file_selected" from="ExportSpritesFileDialog" to="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/ExportSprites" method="_on_export_sprites_file_dialog_file_selected"]
+[connection signal="file_selected" from="ChooseDkExe" to="." method="_on_select_dk_executable_file_dialog_file_selected"]

@@ -1,0 +1,167 @@
+[Stand_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[Ambulate_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[Drag_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[Attack_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[Dig_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[Smoke_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[Relax_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[PrettyDance_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[GotHit_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[PowerGrab_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[GotSlapped_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[Celebrate_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[Sleep_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[EatChicken_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[Torture_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[Scream_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[DropDead_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[DeadSplat_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[GFX18_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[QuerySymbol_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[HandSymbol_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[GFX21_offset]
+
+fp_offset=Vector2(0.5, 1)
+td_offset=Vector2(0.5, 0.8)
+
+[Settings]
+
+CreatureNameLineEdit="DA"
+SetAutoOpenExportDir=false
+SetCameraZoom=1.0
+SetModelScale=0.9
+SetModelPositionX=0.0
+SetModelPositionY=-0.5
+SetCameraClip=100
+SetTdDegrees=46.76
+SetResolutionWidth=140
+SetResolutionHeight=110
+SetMSAA=3
+SetSnapVerticesToPixel=1
+SetSnapTransformsToPixel=1
+SetDenoiseDifference=0.0
+SetDitherStrength=0.02
+SetEdgeHighlightStrength=0.163
+SetEdgeDepthThreshold=1.243
+SetEdgeNormalThreshold=0.622
+SetEdgeHighlightColor=Color(0.113725, 0.105882, 0.105882, 1)
+SetEdgeShadowStrength=0.0
+SetEdgeShadowColor=Color(0, 0, 0, 1)
+SetSobelIntensity=1.22
+SetSobelThreshold=1.21
+SetTonemapMode=2
+SetTonemapExposure=1.73
+SetTonemapWhite=4.98
+SetLightEnergy=0.68
+SetLightColour=Color(0, 0, 0, 1)
+SetAmbientLightEnergy=1.89
+SetAmbientLightColour=Color(0.435294, 0.364706, 0.364706, 1)
+SetSelfShadowing=0.66
+SetLightCount=5
+SetLightAngle=0.0
+SetLightDistance=1.0
+SetOmniRange=5.0
+SetOmniAttenuation=0.0
+SetLightSize=0.0
+SetLightSpecular=8.0
+SetSsaoRadius=1.0
+SetSsaoIntensity=2.0
+SetSsaoPower=1.5
+SetSsaoDetail=0.5
+SetSsaoHorizon=0.06
+SetSsaoSharpness=0.0
+SetSsaoLightAffect=0.0
+SetSsaoAoChannelAffect=0.0
+SetSsilRadius2=5.0
+SetSsilIntensity=0.0
+SetSsilSharpness=0.98
+SetSsilNormalRejection=1.0
+SetFrameColour=Color(0.0313726, 0.0313726, 0.0313726, 1)
+SetUiBackgroundColour=Color(0.348, 0.348, 0.4, 1)
+SetPoserColour=Color(1, 1, 1, 0.501961)
+SetPoserSize=0.04
+SetScreenScale=1.0

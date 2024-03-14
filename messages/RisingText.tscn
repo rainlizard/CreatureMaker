@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://brya3d64bqgss"]
+
+[node name="RisingText" type="Label"]
+anchors_preset = -1
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 60
+text = "TestText"
+horizontal_alignment = 1
+vertical_alignment = 1

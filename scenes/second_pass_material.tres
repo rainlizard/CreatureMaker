@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bm87ge4s6xjq3"]
+
+[ext_resource type="Shader" path="res://scenes/second_pass_material.gdshader" id="1_gxmia"]
+
+[resource]
+render_priority = -1
+shader = ExtResource("1_gxmia")
+shader_parameter/reduce_noise = null
+shader_parameter/edge_depth_threshold = 0.0
+shader_parameter/edge_normal_threshold = 0.0
+shader_parameter/edge_highlight_strength = 0.0
+shader_parameter/edge_shadow_strength = 0.0
+shader_parameter/edge_highlight_color = Color(0, 0, 0, 1)
+shader_parameter/edge_shadow_color = Color(0, 0, 0, 1)

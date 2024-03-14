@@ -1,0 +1,53 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="CreatureMaker"
+run/main_scene="res://main.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+boot_splash/show_image=false
+boot_splash/fullsize=false
+config/icon="res://cm_icon2.png"
+
+[autoload]
+
+Nodelist="*res://autoload/Nodelist.gd"
+Anim="*res://autoload/Anim.gd"
+Constants="*res://autoload/Constants.gd"
+Settings="*res://autoload/Settings.gd"
+Useful="*res://autoload/Useful.gd"
+
+[display]
+
+window/size/viewport_width=2560
+window/size/viewport_height=1440
+window/stretch/aspect="ignore"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/FeedYourScriptsToAI/plugin.cfg", "res://addons/GDScriptMacros/plugin.cfg", "res://addons/IncludeOnExport/plugin.cfg", "res://addons/godot-plugin-refresher/plugin.cfg", "res://addons/script-name-on-top/plugin.cfg")
+
+[gui]
+
+common/text_edit_undo_stack_max_size=2048
+
+[input]
+
+toggle_fullscreen={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":true,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194309,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+dragging_modifier={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194326,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
