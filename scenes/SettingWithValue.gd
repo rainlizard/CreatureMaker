@@ -50,6 +50,10 @@ func apply_to_frame(frame):
 				if frame.is_in_group("TopDownFrame"):
 					var existing_rotation = frame.get_camera_rotation()
 					frame.set_camera_rotation(Vector3(-setting_value,existing_rotation.y,existing_rotation.z))
+			"SetFpDegrees":
+				if frame.is_in_group("FirstPersonFrame"):
+					var existing_rotation = frame.get_camera_rotation()
+					frame.set_camera_rotation(Vector3(-setting_value,existing_rotation.y,existing_rotation.z))
 			"SetModelScale":
 				if is_instance_valid(frame.localModel):
 					frame.set_model_image_scale()

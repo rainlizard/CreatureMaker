@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://k84kqnfpxut5"]
+[gd_scene load_steps=66 format=3 uid="uid://k84kqnfpxut5"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_k3sd8"]
 [ext_resource type="PackedScene" uid="uid://dej2noy0xi7dq" path="res://scenes/SettingWithValue.tscn" id="2_go4a3"]
@@ -17,6 +17,7 @@
 [ext_resource type="Script" path="res://scenes/CameraPerspectiveButton.gd" id="5_uxb0p"]
 [ext_resource type="Script" path="res://BuiltInAnimationOptions.gd" id="7_l71q2"]
 [ext_resource type="Script" path="res://scenes/AniAutoFillButton.gd" id="8_me3j6"]
+[ext_resource type="Texture2D" uid="uid://dg50d4tmjgfq6" path="res://HeightCompare/0_Trap.png" id="8_xxtg4"]
 [ext_resource type="Script" path="res://CenterTutorialLabel.gd" id="10_yjym8"]
 [ext_resource type="Script" path="res://LoadModel.gd" id="11_5mclg"]
 [ext_resource type="Script" path="res://ExportCreature.gd" id="11_g84l1"]
@@ -135,7 +136,6 @@ size_flags_vertical = 3
 
 [node name="HeightComparison" type="PanelContainer" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer"]
 unique_name_in_owner = true
-visible = false
 custom_minimum_size = Vector2(0, 314)
 layout_mode = 2
 mouse_filter = 1
@@ -290,6 +290,15 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 10
 texture = ExtResource("34_br8f2")
+stretch_mode = 2
+
+[node name="TextureRect0" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
+auto_translate_mode = 1
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = ExtResource("8_xxtg4")
 stretch_mode = 2
 
 [node name="TextureRect15" type="TextureRect" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/AllowForCenterText/VSplitContainer/VBoxContainer/HeightComparison/HeightCompareScrollContainer/IntermediateScaler/AllHeightImages"]
@@ -1122,12 +1131,6 @@ default_value = 100.0
 slider_step = 1.0
 maximum_value = 32767.0
 
-[node name="SetTdDegrees" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
-visible = false
-layout_mode = 2
-default_value = 46.76
-maximum_value = 360.0
-
 [node name="SetFirstPersonSize" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
 visible = false
 layout_mode = 2
@@ -1413,6 +1416,21 @@ default_value = 0.98
 visible = false
 layout_mode = 2
 default_value = 1.0
+
+[node name="AnglesCategory" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("54_huf07")]
+layout_mode = 2
+set_text = "Angles"
+
+[node name="SetTdDegrees" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+layout_mode = 2
+default_value = 46.76
+maximum_value = 360.0
+
+[node name="SetFpDegrees" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_go4a3")]
+auto_translate_mode = 1
+layout_mode = 2
+default_value = 12.0
+maximum_value = 360.0
 
 [node name="UICategory" parent="CanvasLayer/Ui/MarginContainer/HSplitContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("54_huf07")]
 layout_mode = 2
