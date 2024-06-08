@@ -185,22 +185,39 @@ vec3 applySobel(sampler2D image, vec2 uv, vec2 resolution) {
 	return gradientMagnitude;
 }
 
+// Convert RGB color to YCbCr color space
+vec3 rgb2ycbcr(vec3 color) {
+    float y = 0.299 * color.r + 0.587 * color.g + 0.114 * color.b;
+    float cb = -0.169 * color.r - 0.331 * color.g + 0.5 * color.b + 0.5;
+    float cr = 0.5 * color.r - 0.419 * color.g - 0.081 * color.b + 0.5;
+    return vec3(y, cb, cr);
+}
+
 // Palette Quantization
 vec3 getNearestPaletteColor(vec3 color) {
     vec3 nearest_colour;
-    float nearest_distance = 100000.0;
+    float nearest_distance = 1e6; // Initialize with a large value
+    vec3 input_ycbcr = rgb2ycbcr(color);
+    
     for (int y = 0; y < paletteImgSize.y; y++) {
         for (int x = 0; x < paletteImgSize.x; x++) {
-            vec2 pixelCoord = vec2(float(x)+0.5,float(y)+0.5) / vec2(paletteImgSize);
+            vec2 pixelCoord = vec2(float(x) + 0.5, float(y) + 0.5) / vec2(paletteImgSize);
             vec3 paletteColour = textureLod(palette_image, pixelCoord, 0).rgb;
-            float check_distance = distance(color, paletteColour);
-            if (check_distance < nearest_distance)
-            {
-                nearest_distance = check_distance;
+            vec3 palette_ycbcr = rgb2ycbcr(paletteColour);
+            
+            // Calculate weighted distance in YCbCr color space
+            float dy = input_ycbcr.x - palette_ycbcr.x;
+            float dcb = input_ycbcr.y - palette_ycbcr.y;
+            float dcr = input_ycbcr.z - palette_ycbcr.z;
+            float weighted_distance = 0.5 * dy * dy + 0.25 * dcb * dcb + 0.25 * dcr * dcr;
+            
+            if (weighted_distance < nearest_distance) {
+                nearest_distance = weighted_distance;
                 nearest_colour = paletteColour;
             }
         }
     }
+    
     return nearest_colour;
 }
 
